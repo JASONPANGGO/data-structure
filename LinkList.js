@@ -55,8 +55,6 @@ class LinkList {
             draw.push(p.value)
             p = p.next
         }
-        draw.pop()
-        draw.push('tail')
         console.log(draw.join(' -> '));
     }
 

@@ -2,7 +2,8 @@ const { LNode } = require('./ListNode')
 const LinkList = require('./LinkList')
 const DoubleLinkList = require('./DoubleLinkList')
 
-let list = new LinkList()
+// let list = new LinkList()
+let list = new DoubleLinkList()
 
 list.append(new LNode(1))
 list.append(new LNode(2))
