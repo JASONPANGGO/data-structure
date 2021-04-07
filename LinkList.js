@@ -4,6 +4,7 @@ class LinkList {
 
     constructor() {
         this.head = new LNode(null)
+        this.count = 0
     }
 
     append(node) {
@@ -12,6 +13,7 @@ class LinkList {
             p = p.next
         }
         p.next = node
+        this.count++
     }
 
     delete(index) {
@@ -20,6 +22,7 @@ class LinkList {
         const next = p.next
         p.next = p.next.next
         next.next = null
+        this.count--
     }
 
     get(index) {
@@ -38,16 +41,11 @@ class LinkList {
         const next = p.next
         p.next = node
         node.next = next
+        this.count++
     }
 
     size() {
-        let count = 0
-        let p = this.head
-        while (p) {
-            p = p.next
-            count++
-        }
-        return count - 1
+        return this.count
     }
 
     paint() {
